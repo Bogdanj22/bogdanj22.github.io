@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body class="bg-neutral text-gray-100 min-h-screen font-sans">
+    <main
+      class="bg-gradient-to-b from-transparent via-[#0a0b0f]/80 to-[#0a0b0f] min-h-screen flex flex-col justify-center"
+    >
+      <section class="max-w-5xl mx-auto px-4 my-4">
+        <div
+          class="flex justify-center flex-col lg:flex-row items-center gap-12"
+        >
+          <div class="lg:w-2/3">
+            <h1 class="text-4xl font-bold mb-4 text-center">
+              Hi there, I'm Bogdan 👋
+            </h1>
+            <div class="space-y-4 bg-gray-800/30 text-gray-300 p-4 rounded-lg">
+              <p class="leading-relaxed">
+                I'm an aspiring DevOps Engineer who loves working with cloud
+                technologies, automation, and containers. I'm learning and
+                growing in the world of DevOps, and I'm excited to showcase the
+                skills I'm acquiring along the way.
+              </p>
+              <p class="leading-relaxed">
+                I'm currently focusing on improving my skills in cloud
+                platforms, containerization, CI/CD pipelines, and infrastructure
+                as code.
+              </p>
+            </div>
+            <div id="social-links" class="flex space-x-4 mt-6"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="max-w-5xl mx-auto px-4 grow md:w-[60%]">
+        <h2 class="text-3xl font-bold text-center">🛠️ My Skills</h2>
+        <p class="my-4 text-center">
+          Here are some of the tools and technologies I've worked with:
+        </p>
+        <div
+          id="skills-grid"
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        ></div>
+      </section>
+    </main>
+  </body>
+</html>
