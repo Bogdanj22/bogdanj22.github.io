@@ -21,12 +21,12 @@ const socialLinks = [
     color: "text-teal-400 hover:text-teal-300",
   },
   {
-    href: "https://linkedin.com", // Dodaj pravi LinkedIn link
+    href: "https://linkedin.com",
     icon: "fab fa-linkedin",
     color: "text-teal-400 hover:text-teal-300",
   },
   {
-    href: "mailto:your.email@example.com", // Dodaj pravi email
+    href: "mailto:your.email@example.com",
     icon: "fas fa-envelope",
     color: "text-teal-400 hover:text-teal-300",
   },
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Render experience section WITHOUT introductory paragraph and GitHub link
+  // Render experience section WITHOUT intro paragraph and GitHub link
   const experienceSection = document.createElement("section");
   experienceSection.id = "experience";
   experienceSection.className = "max-w-5xl mx-auto px-4 my-12";
