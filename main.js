@@ -46,7 +46,6 @@ const skills = [
   { name: "ArgoCD", icon: "fas fa-project-diagram" },
 ];
 
-
 const experience = [
   {
     title: "DevOps Engineer – 12/2024 – 07/2025",
@@ -101,6 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const anchor = document.createElement("a");
       anchor.href = link.href;
       anchor.className = `${link.color} transition-colors`;
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
       anchor.innerHTML = `<i class="${link.icon} text-xl"></i>`;
       socialLinksContainer.appendChild(anchor);
     });
@@ -126,7 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   `;
 
-  // Append jobs dynamically
   const container = experienceSection.querySelector("div");
   experience.forEach((job) => {
     const jobDiv = document.createElement("div");
