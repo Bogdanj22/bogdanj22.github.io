@@ -21,6 +21,7 @@
     <main
       class="bg-gradient-to-b from-transparent via-[#0a0b0f]/80 to-[#0a0b0f] min-h-screen flex flex-col justify-center"
     >
+      <!-- Intro -->
       <section class="max-w-5xl mx-auto px-4 my-4">
         <div
           class="flex justify-center flex-col lg:flex-row items-center gap-12"
@@ -47,6 +48,7 @@
         </div>
       </section>
 
+      <!-- Skills -->
       <section id="skills" class="max-w-5xl mx-auto px-4 grow md:w-[60%]">
         <h2 class="text-3xl font-bold text-center">🛠️ My Skills</h2>
         <p class="my-4 text-center">
@@ -56,6 +58,56 @@
           id="skills-grid"
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
         ></div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="max-w-5xl mx-auto px-4 my-12">
+        <h2 class="text-3xl font-bold text-center mb-6">💼 Experience</h2>
+
+        <div class="bg-gray-800/30 p-6 rounded-lg space-y-6 text-gray-300">
+          <p>
+            DevOps engineer with hands-on experience in AWS, Terraform, Docker, Kubernetes and CI/CD pipelines. Skilled in
+            infrastructure automation, container orchestration, and monitoring solutions. Passionate about improving deployment
+            workflows and ensuring secure, scalable environments.
+          </p>
+          <p>
+            Projects: <a href="https://github.com/Bogdanj22" target="_blank" class="text-blue-400 underline">GitHub Portfolio</a>
+          </p>
+          <p class="font-semibold">Technologies:</p>
+          <p>
+            AWS · Terraform · Ansible · Docker · Git · CI/CD · Kubernetes · Linux · Helm · Grafana · ArgoCD
+          </p>
+
+          <!-- Job 1 -->
+          <div>
+            <h3 class="text-xl font-bold">DevOps Engineer – 12/2024 – 07/2025</h3>
+            <p class="italic">Full-time DevOps role</p>
+            <ul class="list-disc list-inside mt-2 space-y-1">
+              <li>Docker-based containerization and automated image builds using JFrog Artifactory.</li>
+              <li>Extensive Terraform use to provision and configure EC2 instances (including SQL, Web, Carrier and Graylog servers), fully automate server setup, manage networking resources, and develop a reusable S3 module.</li>
+              <li>CI/CD pipeline automation, including implementation of Checkov for Terraform policy enforcement and security scanning.</li>
+              <li>AWS infrastructure provisioning and monitoring (VPC, EC2, EKS, Lambda, S3, IAM, CloudWatch, SNS...)</li>
+              <li>Implemented ScoutSuite for automated cloud infrastructure security audits and compliance checks.</li>
+              <li>Used ArgoCD for GitOps-based continuous delivery and declarative application deployment on Kubernetes.</li>
+              <li>Helm chart development and deployment management with regular updates and rollback support.</li>
+              <li>Managing Kubernetes clusters on AWS (EKS), including upgrades and node maintenance.</li>
+              <li>Monitoring and observability setup using CloudWatch and Grafana.</li>
+              <li>Version control and collaboration using Git and GitLab.</li>
+            </ul>
+          </div>
+
+          <!-- Job 2 -->
+          <div>
+            <h3 class="text-xl font-bold">DevOps Engineer – 08/2024 – 10/2024</h3>
+            <p class="italic">Freelance DevOps role</p>
+            <ul class="list-disc list-inside mt-2 space-y-1">
+              <li>Deployed and managed AWS EC2 instances, including GPU-accelerated instances.</li>
+              <li>Installed and configured GPU drivers and other essential software to optimize instance performance.</li>
+              <li>Diagnosed and resolved issues related to instance performance, connectivity, and application compatibility.</li>
+              <li>Worked closely with development and operations teams to improve deployment processes.</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
   </body>
