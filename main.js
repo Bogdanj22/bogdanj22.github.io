@@ -82,4 +82,60 @@ document.addEventListener("DOMContentLoaded", () => {
   const skillsGrid = document.getElementById("skills-grid");
   if (skillsGrid) {
     skills.forEach((skill) => {
-      const skillCard = document.createElement("di
+      const skillCard = document.createElement("div");
+      skillCard.className =
+        "flex items-center space-x-3 p-4 bg-gray-800/30 backdrop-blur-sm border border-gray-700/30 rounded-xl hover:bg-gray-800/40 transition-colors";
+      skillCard.innerHTML = `
+        <i class="${skill.icon} text-2xl text-teal-400"></i>
+        <span>${skill.name}</span>
+      `;
+      skillsGrid.appendChild(skillCard);
+    });
+  }
+
+  // Render social links
+  const socialLinksContainer = document.getElementById("social-links");
+  if (socialLinksContainer) {
+    socialLinks.forEach((link) => {
+      const anchor = document.createElement("a");
+      anchor.href = link.href;
+      anchor.className = `${link.color} transition-colors`;
+      anchor.innerHTML = `<i class="${link.icon} text-xl"></i>`;
+      socialLinksContainer.appendChild(anchor);
+    });
+  }
+
+  // Render experience section WITHOUT introductory paragraph and GitHub link
+  const experienceSection = document.createElement("section");
+  experienceSection.id = "experience";
+  experienceSection.className = "max-w-5xl mx-auto px-4 my-12";
+  experienceSection.innerHTML = `
+    <h2 class="text-3xl font-bold text-center mb-6">💼 Experience</h2>
+    <div class="bg-gray-800/30 p-6 rounded-lg space-y-6 text-gray-300">
+      <p class="font-semibold">Technologies:</p>
+      <p>AWS · Terraform · Ansible · Docker · Git · CI/CD · Kubernetes · Linux · Helm · Grafana · ArgoCD</p>
+    </div>
+  `;
+
+  // Append jobs dynamically
+  const container = experienceSection.querySelector("div");
+  experience.forEach((job) => {
+    const jobDiv = document.createElement("div");
+    jobDiv.innerHTML = `
+      <h3 class="text-xl font-bold">${job.title}</h3>
+      <p class="italic">${job.type}</p>
+      <ul class="list-disc list-inside mt-2 space-y-1">
+        ${job.details.map((d) => `<li>${d}</li>`).join("")}
+      </ul>
+    `;
+    container.appendChild(jobDiv);
+  });
+
+  mainElement.appendChild(experienceSection);
+
+  // Footer
+  const footer = document.createElement("footer");
+  footer.className = "text-center py-4 text-gray-500 md:pt-0";
+  footer.innerHTML = `&copy; ${new Date().getFullYear()} Bogdan. All rights reserved.`;
+  mainElement.appendChild(footer);
+});
