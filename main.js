@@ -105,16 +105,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Render experience section WITHOUT intro paragraph and GitHub link
+  // Render experience section WITHOUT intro paragraph, GitHub link, and Technologies
   const experienceSection = document.createElement("section");
   experienceSection.id = "experience";
   experienceSection.className = "max-w-5xl mx-auto px-4 my-12";
   experienceSection.innerHTML = `
     <h2 class="text-3xl font-bold text-center mb-6">💼 Experience</h2>
-    <div class="bg-gray-800/30 p-6 rounded-lg space-y-6 text-gray-300">
-      <p class="font-semibold">Technologies:</p>
-      <p>AWS · Terraform · Ansible · Docker · Git · CI/CD · Kubernetes · Linux · Helm · Grafana · ArgoCD</p>
-    </div>
+    <div class="bg-gray-800/30 p-6 rounded-lg space-y-6 text-gray-300"></div>
   `;
 
   // Append jobs dynamically
