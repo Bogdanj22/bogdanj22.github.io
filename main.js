@@ -1,18 +1,4 @@
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        primary: "#845EC2",
-        accent: "#4D8076",
-        neutral: "#4B4453",
-      },
-    },
-    fontFamily: {
-      sans: ["Ubuntu", "sans-serif"],
-      agbalumo: ["Agbalumo", "sans-serif"],
-    },
-  },
-};
+// tailwind.config nije potreban ovde, jer se koristi CDN tailwind
 
 const socialLinks = [
   {
@@ -21,12 +7,12 @@ const socialLinks = [
     color: "text-teal-400 hover:text-teal-300",
   },
   {
-    href: "https://linkedin.com",
+    href: "https://linkedin.com", // Dodaj pravi LinkedIn link
     icon: "fab fa-linkedin",
     color: "text-teal-400 hover:text-teal-300",
   },
   {
-    href: "mailto:your.email@example.com",
+    href: "mailto:your.email@example.com", // Dodaj pravi email
     icon: "fas fa-envelope",
     color: "text-teal-400 hover:text-teal-300",
   },
@@ -100,24 +86,25 @@ document.addEventListener("DOMContentLoaded", () => {
       const anchor = document.createElement("a");
       anchor.href = link.href;
       anchor.className = `${link.color} transition-colors`;
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
       anchor.innerHTML = `<i class="${link.icon} text-xl"></i>`;
       socialLinksContainer.appendChild(anchor);
     });
   }
 
-  // Render experience section WITHOUT intro paragraph and GitHub link
+  // Render experience section
   const experienceSection = document.createElement("section");
   experienceSection.id = "experience";
   experienceSection.className = "max-w-5xl mx-auto px-4 my-12";
   experienceSection.innerHTML = `
     <h2 class="text-3xl font-bold text-center mb-6">💼 Experience</h2>
     <div class="bg-gray-800/30 p-6 rounded-lg space-y-6 text-gray-300">
-      <p class="font-semibold">Technologies:</p>
-      <p>AWS · Terraform · Ansible · Docker · Git · CI/CD · Kubernetes · Linux · Helm · Grafana · ArgoCD</p>
+      <!-- Removed summary and Technologies -->
     </div>
   `;
 
-  // Append jobs dynamically
+  // Append jobs dynamically inside that div
   const container = experienceSection.querySelector("div");
   experience.forEach((job) => {
     const jobDiv = document.createElement("div");
